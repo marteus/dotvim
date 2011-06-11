@@ -43,7 +43,7 @@ set noerrorbells " no damn pc beeps
 
 " set backup		" keep a backup file
 " set backupdir=~/.vim/vimfiles/backup " backup files 
-set directory=~/.vim/vimfiles/temp " dir for temp files
+" set directory=~/.vim/vimfiles/temp " dir for temp files
 
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
