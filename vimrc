@@ -180,3 +180,4 @@ let g:miniBufExplModSelTarget = 1
 
 " Custom highlighting
 hi scalaOperator gui=bold guifg=#cc0000
+
