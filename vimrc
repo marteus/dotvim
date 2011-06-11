@@ -21,7 +21,7 @@ let mapleader=","           " change mapleader from \ to ,
 
 set wildmenu
 set wildmode=longest,full
-set wildignore+=*.o,*.a,*.so,*.bak,*.class
+set wildignore+=*.o,*.a,*.so,*.bak,*.class,.git
 
 set tabstop=4 softtabstop=4 shiftwidth=4
 set noexpandtab " tabs is tabs, not spaces :p
