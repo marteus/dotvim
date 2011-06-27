@@ -1,6 +1,9 @@
 " Maintainer:   Henrique C. Alves (hcarvalhoalves@gmail.com)
 " Version:      1.0
 " Last Change:  September 25 2008
+" Maintainer:   Martin Skytte Kristensen (skytte@gmail.com)
+" Version:      1.5
+" Last Change:  June 14 2011
 
 set background=dark
 
@@ -33,13 +36,18 @@ hi Cursor       guifg=NONE    guibg=#626262 ctermbg=241 gui=none ctermbg=241
 hi Normal       guifg=#e2e2e5 ctermfg=7 guibg=#202020 ctermbg=234 gui=none ctermfg=253 ctermbg=234
 hi NonText      guifg=#808080 ctermfg=244 guibg=#303030 ctermbg=236 gui=none ctermfg=244 ctermbg=235
 hi LineNr       guifg=#808080 ctermfg=244 guibg=#000000 ctermbg=0 gui=none ctermfg=244 ctermbg=232
-hi StatusLine   guifg=#d3d3d5 ctermfg=188 guibg=#444444 ctermbg=238 gui=italic ctermfg=253 ctermbg=238 cterm=italic
+hi StatusLine   guifg=#d3d3d5 ctermfg=188 guibg=#444444 ctermbg=238 gui=italic,bold ctermfg=253 ctermbg=238 cterm=italic
 hi StatusLineNC guifg=#939395 ctermfg=246 guibg=#444444 ctermbg=238 gui=none ctermfg=246 ctermbg=238
 hi VertSplit    guifg=#444444 ctermfg=238 guibg=#444444 ctermbg=238 gui=none ctermfg=238 ctermbg=238
 hi Folded       guibg=#384048 ctermbg=238 guifg=#a0a8b0 ctermfg=248 gui=none ctermbg=4 ctermfg=248
 hi Title        guifg=#f6f3e8 ctermfg=7 guibg=NONE    gui=bold ctermfg=254 cterm=bold
 hi Visual       guifg=#faf4c6 ctermfg=230 guibg=#3c414c ctermbg=238 gui=none ctermfg=254 ctermbg=4
 hi SpecialKey   guifg=#808080 ctermfg=244 guibg=#343434 ctermbg=236 gui=none ctermfg=244 ctermbg=236
+
+hi TabLineFill  guifg=#444444 ctermfg=238 guibg=#444444 ctermbg=238 gui=none ctermfg=238 ctermbg=238
+hi TabLineSel   guifg=#d3d3d5 ctermfg=188 guibg=#444444 ctermbg=238 gui=italic,bold ctermfg=253 ctermbg=238 cterm=italic
+hi TabLine      guifg=#939395 ctermfg=246 guibg=#444444 ctermbg=238 gui=none ctermfg=246 ctermbg=238
+
 
 " Syntax highlighting
 hi Comment      guifg=#808080 ctermfg=244 gui=italic ctermfg=244
