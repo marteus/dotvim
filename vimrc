@@ -13,7 +13,8 @@ set backspace=indent,eol,start       " allow backspacing over everything in inse
 "highlight Normal guibg=black guifg=white
 "highlight Folded guibg=black
 "set guifont=Terminus
-set guifont=Monaco\ 10
+"set guifont=Monaco\ 10
+set guifont=Monospace\ 10
 
 colo mustang
 
@@ -26,7 +27,8 @@ set wildignore+=*.o,*.a,*.so,*.bak,*.class,.git
 set tabstop=4 softtabstop=4 shiftwidth=4
 set noexpandtab " tabs is tabs, not spaces :p
 set smarttab
-set autoindent copyindent preserveindent
+set copyindent preserveindent
+set autoindent
 
 "set smarttab " use tabs at the start of a line, spaces elsewhere
 " use bare bone terminal like gui
@@ -67,6 +69,7 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+nmap <Leader>/ :nohlsearch<CR>
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -100,6 +103,8 @@ autocmd BufNewFile,BufRead *.module set filetype=php
 
 autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 
+autocmd Filetype c   set tags+=/usr/include/tags
+autocmd Filetype cpp set tags+=/usr/include/tags
 autocmd Filetype cpp nmap \check :!g++ -fsyntax-only % <CR>
 autocmd Filetype c nmap \check :!gcc -fsyntax-only % <CR>
 autocmd Filetype php nmap \check :!php --syntax-check % <CR>
@@ -148,35 +153,6 @@ let Tlist_Enable_Fold_Column = 0
 let Tlist_Sort_Type = "name"
 let Tlist_Display_Prototype = 0
 nnoremap <silent> <F8> :TlistToggle<CR>
-
-let tlist_php_settings = 'php;c:class;f:function'
-
-let treeExplVertical = 1
-let treeExplWinSize = 30
-let treeExplHidden = 1
-let treeExplHidePattern = "\.class\|\.o"
-
-
-set tags+=/usr/include/tags
-map <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
-
-" Set 300 ms for refreshing the Source Explorer
-let g:SrcExpl_refreshTime  = 300
-let g:SrcExpl_winHeight     = 9
-" Let the Source Explorer update the tags file when opening
-let g:SrcExpl_updateTags  = 1
-let g:SrcExpl_refreshKey   = "<Space>"
-let g:SrcExpl_gobackKey    = "<C-b>"
-" The switch of the Source Explorer
-nmap <M-F8> :SrcExplToggle<CR> 
-
-" MiniBufExplorer settings
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-
-
 
 " Custom highlighting
 hi scalaOperator gui=bold guifg=#cc0000
