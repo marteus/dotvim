@@ -19,6 +19,3 @@
 [submodule "bundle/delimitMate"]
 	path = bundle/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
-[submodule "bundle/lua-ftplugin"]
-	path = bundle/lua-ftplugin
-	url = https://github.com/xolox/vim-lua-ftplugin.git
