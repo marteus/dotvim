@@ -144,6 +144,7 @@ let c_cpp_comments = 1
 let c_no_names = 1
 let c_C99 = 1
 
+noremap <silent> <F9> :TagbarToggle<CR>
 
 " F8 : toggle taglist explorer
 let Tlist_Exit_OnlyWindow = 1
