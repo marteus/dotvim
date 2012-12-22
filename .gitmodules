@@ -30,4 +30,4 @@
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
 [submodule "bundle/glsl"]
 	path = bundle/glsl
-	url = git@github.com:marteus/glsl.vim.git
+	url = https://github.com/marteus/glsl.vim.git
