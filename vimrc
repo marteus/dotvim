@@ -159,3 +159,13 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 " Custom highlighting
 hi scalaOperator gui=bold guifg=#cc0000
 
+
+function! FoldText()
+	let indent_level = indent(v:foldstart)
+	let indent = repeat(' ', indent_level)
+	let left_trimmed_text = substitute(getline(v:foldstart), '^\s*', '', '')
+	let foldsize = v:foldend - v:foldstart
+	return indent . left_trimmed_text . ' (' . foldsize. ' lines)'
+endfunction
+
+set foldtext=FoldText()
