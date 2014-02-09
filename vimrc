@@ -12,10 +12,6 @@ set backspace=indent,eol,start       " allow backspacing over everything in inse
 " set bg=dark
 "highlight Normal guibg=black guifg=white
 "highlight Folded guibg=black
-"set guifont=Terminus
-"set guifont=Monaco\ 10
-set guifont=Monospace\ 10
-
 colo mustang
 
 let mapleader=","           " change mapleader from \ to ,
@@ -35,7 +31,7 @@ set autoindent
 set guioptions=
 
 set number " turn on line numbering
-set list
+" set list
 set listchars=tab:»·,nbsp:%,trail:·,extends:>,precedes:< " what to show when I hit :set list
 set noerrorbells " no damn pc beeps
 
