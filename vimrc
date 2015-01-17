@@ -16,7 +16,7 @@ colo mustang
 let mapleader=","           " change mapleader from \ to ,
 
 set wildmenu
-set wildmode=longest,full
+set wildmode=longest:list
 set wildignore+=*.o,*.a,*.so,*.bak,*.class,.git
 
 set tabstop=4 softtabstop=4 shiftwidth=4
@@ -57,6 +57,8 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+
+nmap <C-CR> <C-]> 
 
 " Easy window navigation
 nmap <C-h> <C-w>h
