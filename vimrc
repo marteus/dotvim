@@ -192,7 +192,7 @@ augroup omnisharp_commands
     autocmd!
 
     "Set autocomplete function to OmniSharp (if not using YouCompleteMe completion plugin)
-    autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
+    " autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
     " Synchronous build (blocks Vim)
     "autocmd FileType cs nnoremap <F5> :wa!<cr>:OmniSharpBuild<cr>
