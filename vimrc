@@ -35,9 +35,6 @@ set listchars=tab:»·,nbsp:%,trail:·,extends:>,precedes:< " what to show when 
 set noerrorbells " no damn pc beeps
 
 
-" i'll be using SCons for c/c++ programming :)
-" set makeprg=scons\ -Q\ -j3
-
 " set backup		" keep a backup file
 " set backupdir=~/.vim/vimfiles/backup " backup files 
 " set directory=~/.vim/vimfiles/temp " dir for temp files
@@ -58,13 +55,8 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-nmap <C-CR> <C-]> 
-
-" Easy window navigation
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+" DK layout on mac cannot do C-] (and it is awkward anyway)
+nnoremap <C-CR> <C-]> 
 
 nmap <Leader>/ :nohlsearch<CR>
 " Don't use Ex mode, use Q for formatting
@@ -102,11 +94,6 @@ autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 
 autocmd Filetype c   set tags+=/usr/include/tags
 autocmd Filetype cpp set tags+=/usr/include/tags
-autocmd Filetype cpp nmap \check :!g++ -fsyntax-only % <CR>
-autocmd Filetype c nmap \check :!gcc -fsyntax-only % <CR>
-autocmd Filetype php nmap \check :!php --syntax-check % <CR>
-autocmd Filetype php set makeprg=php\ -l\ %
-                       \ errorformat=%m\ in\ %f\ on\ line\ %l
 autocmd FileType php set ts=2 sw=2
 
 autocmd FileType scala set ts=2 sw=2 et
@@ -119,11 +106,8 @@ autocmd FileType tex set textwidth=0 nolist spell spelllang=en_us
 autocmd FileType text setlocal nolist
 
 
-let g:haddock_browser="/usr/bin/firefox"
-let g:haddock_docdir="/usr/share/doc/ghc"
-
 " Show syntax highlighting groups for word under cursor
-nmap <C-S-P> :call <SID>SynStack()<CR>
+nmap <C-S-h> :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
