@@ -57,6 +57,7 @@ vnoremap k gk
 
 " DK layout on mac cannot do C-] (and it is awkward anyway)
 nnoremap <C-CR> <C-]> 
+nnoremap æ :
 
 nmap <Leader>/ :nohlsearch<CR>
 " Don't use Ex mode, use Q for formatting
