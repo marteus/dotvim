@@ -11,6 +11,9 @@ set backspace=indent,eol,start       " allow backspacing over everything in inse
 " set bg=dark
 "highlight Normal guibg=black guifg=white
 "highlight Folded guibg=black
+
+" Fix bad default background for SignColumn
+highlight SignColumn ctermbg=NONE guibg=NONE
 colo mustang
 
 let mapleader=","           " change mapleader from \ to ,
@@ -24,10 +27,7 @@ set noexpandtab " tabs is tabs, not spaces :p
 set smarttab
 set copyindent preserveindent
 set autoindent
-
-"set smarttab " use tabs at the start of a line, spaces elsewhere
-" use bare bone terminal like gui
-set guioptions=
+set cinoptions=(0,u0,U0,W4,m1
 
 set number " turn on line numbering
 " set list
@@ -54,6 +54,15 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
+
+" map shift k to split current line (opposite to J for join lines)
+nnoremap K i<CR><Esc>
+
+" moving aroung in command mode
+cnoremap <c-h> <left>
+cnoremap <c-j> <down>
+cnoremap <c-k> <up>
+cnoremap <c-l> <right>
 
 " DK layout on mac cannot do C-] (and it is awkward anyway)
 nnoremap <C-CR> <C-]> 
@@ -167,12 +176,6 @@ let g:OmniSharp_timeout = 1
 "when the first match contains parentheses.
 " set noshowmatch
 
-"Super tab settings - uncomment the next 4 lines
-"let g:SuperTabDefaultCompletionType = 'context'
-"let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-"let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
-"let g:SuperTabClosePreviewOnPopupClose = 1
-
 "don't autoselect first item in omnicomplete, show if only one item (for preview)
 "remove preview if you don't want to see any documentation whatsoever.
 set completeopt=longest,menuone,preview
@@ -187,7 +190,8 @@ set completeopt=longest,menuone,preview
 set splitbelow
 
 " Get Code Issues and syntax errors
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+let g:syntastic_cs_checkers = ['syntax', 'semantic'] " ['syntax', 'semantic', 'issues']
+" let g:syntastic_disabled_filetypes = ['cs']
 
 augroup omnisharp_commands
     autocmd!
@@ -207,7 +211,7 @@ augroup omnisharp_commands
     autocmd BufWritePost *.cs call OmniSharp#AddToProject()
 
     "show type information automatically when the cursor stops moving
-    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
+"    autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
 
     "The following commands are contextual, based on the current cursor position.
 
