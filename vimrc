@@ -34,6 +34,9 @@ set number " turn on line numbering
 set listchars=tab:»·,nbsp:%,trail:·,extends:>,precedes:< " what to show when I hit :set list
 set noerrorbells " no damn pc beeps
 
+" always show status line
+set laststatus=2
+
 
 " set backup		" keep a backup file
 " set backupdir=~/.vim/vimfiles/backup " backup files 
@@ -262,3 +265,5 @@ nnoremap <leader>sp :OmniSharpStopServer<cr>
 nnoremap <leader>th :OmniSharpHighlightTypes<cr>
 "Don't ask to save when changing buffers (i.e. when jumping to a type definition)
 set hidden
+
+let g:airline_powerline_fonts = 1

@@ -4,7 +4,7 @@ set bg=light
 colo solarized
 
 if has('mac')
-	set guifont=Monaco\ 12
+	set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14,Monaco:h12
 else 
 	set guifont=Monospace\ 10
 endif
