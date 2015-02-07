@@ -71,6 +71,9 @@ cnoremap <c-l> <right>
 nnoremap <C-CR> <C-]> 
 nnoremap æ :
 
+" Fast shortcut to leave insert mode instead of C-c or Esc
+inoremap jk <Esc>
+
 nmap <Leader>/ :nohlsearch<CR>
 " Don't use Ex mode, use Q for formatting
 map Q gq
