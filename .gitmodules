@@ -64,3 +64,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
+[submodule "bundle/vim-operator-highlight"]
+	path = bundle/vim-operator-highlight
+	url = https://github.com/Valloric/vim-operator-highlight.git

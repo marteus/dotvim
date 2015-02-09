@@ -270,3 +270,5 @@ nnoremap <leader>th :OmniSharpHighlightTypes<cr>
 set hidden
 
 let g:airline_powerline_fonts = 1
+
+let g:ophigh_highlight_link_group="Special"
