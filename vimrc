@@ -37,7 +37,9 @@ set noerrorbells " no damn pc beeps
 " always show status line
 set laststatus=2
 
+" window settings
 set noequalalways
+set splitright
 
 " set backup		" keep a backup file
 " set backupdir=~/.vim/vimfiles/backup " backup files 
@@ -70,6 +72,7 @@ cnoremap <c-l> <right>
 " DK layout on mac cannot do C-] (and it is awkward anyway)
 nnoremap <C-CR> <C-]> 
 nnoremap æ :
+vnoremap æ :
 
 " Fast shortcut to leave insert mode instead of C-c or Esc
 inoremap jk <Esc>
@@ -121,6 +124,7 @@ autocmd FileType haskell compiler ghc
 autocmd FileType tex set textwidth=0 nolist spell spelllang=en_us
 autocmd FileType text setlocal nolist
 
+autocmd FileType cs,c,cpp set commentstring=//\ %s
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-h> :call <SID>SynStack()<CR>
@@ -260,3 +264,8 @@ set hidden
 let g:airline_powerline_fonts = 1
 
 let g:ophigh_highlight_link_group="Special"
+
+let g:ycm_error_symbol = ">>"
+let g:ycm_warning_symbol = "*"
+
+let g:tcommentOptions = {'col': 1}
