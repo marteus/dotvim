@@ -37,6 +37,7 @@ set noerrorbells " no damn pc beeps
 " always show status line
 set laststatus=2
 
+set noequalalways
 
 " set backup		" keep a backup file
 " set backupdir=~/.vim/vimfiles/backup " backup files 
@@ -47,7 +48,6 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set ignorecase  " case insensitive searching
-set smartcase
 
 set wrap
 set linebreak
@@ -141,21 +141,6 @@ let g:Tex_DefaultTargetFormat='pdf'
 let c_cpp_comments = 1
 let c_no_names = 1
 let c_C99 = 1
-
-noremap <silent> <F9> :TagbarToggle<CR>
-
-" F8 : toggle taglist explorer
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_File_Fold_Auto_Close = 0
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Enable_Fold_Column = 0
-let Tlist_Sort_Type = "name"
-let Tlist_Display_Prototype = 0
-nnoremap <silent> <F8> :TlistToggle<CR>
-
-" Custom highlighting
-hi scalaOperator gui=bold guifg=#cc0000
-
 
 function! FoldText()
 	let indent_level = indent(v:foldstart)
