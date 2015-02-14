@@ -64,6 +64,6 @@
 [submodule "bundle/vim-operator-highlight"]
 	path = bundle/vim-operator-highlight
 	url = https://github.com/Valloric/vim-operator-highlight.git
-[submodule "bundle/vim-commentary"]
-	path = bundle/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/tcomment_vim"]
+	path = bundle/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim.git
