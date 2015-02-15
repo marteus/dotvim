@@ -85,6 +85,10 @@ nmap <Leader>/ :nohlsearch<CR>
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+" Shortcuts for pasting last yanked buffer
+nnoremap <Leader>p "0p
+nnoremap <Leader>P "0P
+
 syntax on
 set hlsearch
 
