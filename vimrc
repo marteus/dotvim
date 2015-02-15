@@ -51,6 +51,10 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set ignorecase  " case insensitive searching
 
+set visualbell
+set scrolloff=3
+set cursorline
+
 set wrap
 set linebreak
 set showbreak=..
