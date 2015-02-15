@@ -227,9 +227,9 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <leader>tt :OmniSharpTypeLookup<cr>
     autocmd FileType cs nnoremap <leader>dc :OmniSharpDocumentation<cr>
     "navigate up by method/property/field
-    autocmd FileType cs nnoremap <C-j> :OmniSharpNavigateUp<cr>
+    autocmd FileType cs nnoremap <C-k> :OmniSharpNavigateUp<cr>
     "navigate down by method/property/field
-    autocmd FileType cs nnoremap <C-k> :OmniSharpNavigateDown<cr>
+    autocmd FileType cs nnoremap <C-j> :OmniSharpNavigateDown<cr>
 
 augroup END
 
