@@ -16,7 +16,7 @@ set backspace=indent,eol,start       " allow backspacing over everything in inse
 highlight SignColumn ctermbg=NONE guibg=NONE
 colo mustang
 
-let mapleader=","           " change mapleader from \ to ,
+let mapleader=" "           " change mapleader from \ to ,
 
 set wildmenu
 set wildmode=longest:list
@@ -77,6 +77,25 @@ cnoremap <c-l> <right>
 nnoremap <C-CR> <C-]> 
 nnoremap æ :
 vnoremap æ :
+
+" Normal mode motion remaps
+nnoremap ø ]
+nnoremap øø ]]
+nnoremap å [
+nnoremap åå [[
+
+nnoremap Å {
+nnoremap Ø }
+
+" Visual mode remaps
+vnoremap ø ]
+vnoremap øø ]]
+vnoremap å [
+vnoremap åå [[
+
+vnoremap Å {
+vnoremap Ø }
+
 
 " Fast shortcut to leave insert mode instead of C-c or Esc
 inoremap jk <Esc>
