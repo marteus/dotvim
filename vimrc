@@ -294,3 +294,5 @@ let g:ycm_error_symbol = ">>"
 let g:ycm_warning_symbol = "*"
 
 let g:tcommentOptions = {'col': 1}
+
+let delimitMate_expand_cr = 1
