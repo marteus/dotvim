@@ -2,7 +2,8 @@
 
 set bg=light
 colo solarized
-highlight SignColumn ctermbg=NONE guibg=NONE
+hi clear SignColumn
+hi link SignColumn LineNr
 
 if has('mac')
 	set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14,Monaco:h12

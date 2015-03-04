@@ -21,6 +21,7 @@ let mapleader=" "           " change mapleader from \ to ,
 set wildmenu
 set wildmode=longest:list
 set wildignore+=*.o,*.a,*.so,*.bak,*.class,.git
+set wildignorecase
 
 set tabstop=4 softtabstop=4 shiftwidth=4
 set noexpandtab " tabs is tabs, not spaces :p
@@ -190,7 +191,7 @@ let g:OmniSharp_host = "http://localhost:2000"
 "let g:OmniSharp_typeLookupInPreview = 1
 
 "Timeout in seconds to wait for a response from the server
-let g:OmniSharp_timeout = 1
+let g:OmniSharp_timeout = 3
 
 "Showmatch significantly slows down omnicomplete
 "when the first match contains parentheses.
@@ -296,3 +297,8 @@ let g:ycm_warning_symbol = "*"
 let g:tcommentOptions = {'col': 1}
 
 let delimitMate_expand_cr = 1
+
+" Disable working copy fuckery
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_max_files = 30000
+
