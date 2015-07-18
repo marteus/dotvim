@@ -40,7 +40,6 @@ set laststatus=2
 
 " window settings
 set noequalalways
-set splitright
 
 " set backup		" keep a backup file
 " set backupdir=~/.vim/vimfiles/backup " backup files 
@@ -130,17 +129,8 @@ autocmd BufReadPost *
   \   exe "normal g`\"" |
   \ endif
 
-autocmd FileType python set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
-autocmd FileType python set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-autocmd FileType python nmap <F5> :!python %<cr> 
-
-autocmd BufNewFile,BufRead SCons* set filetype=scons
-autocmd BufNewFile,BufRead *.module set filetype=php
-
 autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl setf glsl
 
-autocmd Filetype c   set tags+=/usr/include/tags
-autocmd Filetype cpp set tags+=/usr/include/tags
 autocmd FileType php set ts=2 sw=2
 
 autocmd FileType scala set ts=2 sw=2 et
@@ -293,6 +283,14 @@ let g:ophigh_highlight_link_group="Special"
 
 let g:ycm_error_symbol = ">>"
 let g:ycm_warning_symbol = "*"
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+
+augroup cpp_commands
+    autocmd!
+
+    autocmd FileType c,cpp nnoremap <leader>gd :YcmCompleter GoTo<cr>
+augroup END
 
 let g:tcommentOptions = {'col': 1}
 
@@ -301,4 +299,6 @@ let delimitMate_expand_cr = 1
 " Disable working copy fuckery
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 30000
+" open new file in current window
+let g:ctrlp_open_new_file = 'r'
 
