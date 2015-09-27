@@ -298,6 +298,7 @@ augroup END
 let g:tcommentOptions = {'col': 1}
 
 let delimitMate_expand_cr = 1
+inoremap <expr> <C-l> delimitMate#JumpAny()
 
 " Disable working copy fuckery
 let g:ctrlp_working_path_mode = 0
