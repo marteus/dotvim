@@ -135,6 +135,8 @@ autocmd FileType php set ts=2 sw=2
 
 autocmd FileType scala set ts=2 sw=2 et
 
+autocmd FileType python set ts=4 sw=4 et foldmethod=indent
+
 
 autocmd FileType haskell set expandtab
 autocmd FileType haskell compiler ghc
@@ -170,6 +172,7 @@ function! FoldText()
 	return indent . left_trimmed_text . ' (' . foldsize. ' lines)'
 endfunction
 
+set foldopen-=block
 set foldtext=FoldText()
 " OmniSharp won't work without this setting
 filetype plugin on
