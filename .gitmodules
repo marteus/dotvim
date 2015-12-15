@@ -64,3 +64,6 @@
 [submodule "/Users/martin/.vim/bundle/vim-javascript"]
 	path = /Users/martin/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/rust"]
+	path = bundle/rust
+	url = https://github.com/rust-lang/rust.vim
