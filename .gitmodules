@@ -64,3 +64,6 @@
 [submodule "bundle/ferret"]
 	path = bundle/ferret
 	url = https://github.com/wincent/ferret.git
+[submodule "/Users/martin/.vim/bundle/vim-javascript"]
+	path = /Users/martin/.vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
