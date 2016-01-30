@@ -18,6 +18,8 @@ colo mustang
 
 let mapleader=" "           " change mapleader from \ to ,
 
+set autoread
+
 set wildmenu
 set wildmode=longest:list
 set wildignore+=*.o,*.a,*.so,*.bak,*.class,.git
@@ -306,3 +308,6 @@ let g:ctrlp_max_files = 30000
 " open new file in current window
 let g:ctrlp_open_new_file = 'r'
 
+
+" Autoformat options
+autocmd BufWrite *.rs :Autoformat
